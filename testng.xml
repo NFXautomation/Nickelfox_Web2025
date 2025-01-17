@@ -4,31 +4,43 @@
   <test thread-count="5" name="Test">
     <classes>
     
-        <class name="com.nickelfox.testcases.About_Test_case"/>
-     <class name="com.nickelfox.testcases.Contact_With_Us_Page_Test"/>
-     
-      <class name="com.nickelfox.testcases.Success_Stories_Page_Test"/>
-    
-      <class name="com.nickelfox.testcases.Blog_Page_Test"/>
-            <class name="com.nickelfox.testcases.Industries_Page_Test"/>
-      <class name="com.nickelfox.testcases.Live_Chat_Test"/>
-         <class name="com.nickelfox.testcases.Career_Page_Test"/>
-    <!-- Test
-     <class name="com.nickelfox.testcases.Tech_Stack_Page_Test"/>
+     <class name="com.nickelfox.testcases.Contact_Page_Test"/>
+			<class name="com.nickelfox.testcases.Blog_Page_Test"/>
+        <class name="com.nickelfox.testcases.Contact_With_Us_Page_Test"/>
+            <class name="com.nickelfox.testcases.Live_Chat_Test"/>
+                 <class name="com.nickelfox.testcases.Career_Page_Test"/>
+     <class name="com.nickelfox.testcases.testing_all_form_test"/>
+   
+        <!-- 
+			
+			
+			   <class name="com.nickelfox.testcases.Contact_Page_Test"/>
+			<class name="com.nickelfox.testcases.Blog_Page_Test"/>
+        <class name="com.nickelfox.testcases.Contact_With_Us_Page_Test"/>
+            <class name="com.nickelfox.testcases.Live_Chat_Test"/>
+                 <class name="com.nickelfox.testcases.Career_Page_Test"/>-->
+      <!--<class name="com.nickelfox.baseclass.BaseClass"/>
+       <class name="com.nickelfox.testcases.ServiceITSrvcItOutsourcing_Test_case"/>
+
+      <class name="com.nickelfox.testcases.ServiceMobileAppDevPWAAppDev_Test_case"/>
+      <class name="com.nickelfox.testcases.Tech_Stack_Page_Test"/>
+      <class name="com.nickelfox.testcases.ServiceMobileAppDevFlutterAppDev_Test_case"/>
+      <class name="com.nickelfox.testcases.ServiceMobileAppDevIosAppDev_Test_case"/>
+      <class name="com.nickelfox.testcases.ServiceUiUxDesign_Test_case"/>
       <class name="com.nickelfox.testcases.Service_Test_case"/>
+      <class name="com.nickelfox.testcases.ServiceProductEngProductManagement_Test_case"/>
       <class name="com.nickelfox.testcases.Blog_Page_Test"/>
-         <class name="com.nickelfox.baseclass.BaseClass"/>
+      <class name="com.nickelfox.testcases.ServiceMobileAppDevWearableAppDev_Test_case"/>
       <class name="com.nickelfox.testcases.Career_Page_Test"/>
-     <class name="com.nickelfox.testcases.Career_Page_Test"/>
+      <class name="com.nickelfox.testcases.ServiceMobileAppDevHybridAppDev_Test_case"/>
+      <class name="com.nickelfox.testcases.ServiceITSrvcItConsulting_Test_case"/>
       <class name="com.nickelfox.testcases.Contact_With_Us_Page_Test"/>
       <class name="com.nickelfox.testcases.Industries_Page_Test"/>
-      <class name="com.nickelfox.testcases.Live_Chat_Test"/>
+      <class name="com.nickelfox.testcases.ServiceITSrvcItStaffAugmentation_Test_Case"/>
       <class name="com.nickelfox.testcases.About_Test_case"/>
-      <class name="com.nickelfox.testcases.Tech_Stack_Page_Test"/>
       <class name="com.nickelfox.testcases.Success_Stories_Page_Test"/>
       <class name="com.nickelfox.testcases.Contact_Page_Test"/>
-      <class name="com.nickelfox.testcases.ServiceUiUxDesign_Test_case"/>
-   -->
+      <class name="com.nickelfox.testcases.ServiceMobileAppDevAndroidAppDev_Test_case"/>-->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
