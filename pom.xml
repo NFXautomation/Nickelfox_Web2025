@@ -130,9 +130,10 @@
         <version>3.5.2</version>
         <configuration>
           
-          <suiteXmlFiles>
-            <suiteXmlFile>testng.xml</suiteXmlFile>
-          </suiteXmlFiles>
+         
+          <includes>
+            <include>About_Test_case.java</include>
+          </includes>
         </configuration>
       </plugin>
     
