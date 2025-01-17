@@ -144,6 +144,11 @@
         <configuration>
           <useSystemClassLoader>false</useSystemClassLoader>
         </configuration>
+	      <configuration>
+          <includes>
+            <include>About_Test_case.java</include>
+          </includes>
+        </configuration>
       </plugin>
     </plugins>
       
