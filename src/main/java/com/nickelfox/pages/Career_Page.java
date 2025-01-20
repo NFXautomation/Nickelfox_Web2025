@@ -174,7 +174,7 @@ public class Career_Page {
 	//	System.out.println("click on the resume upload");
 
 		// Copy the file path to the clipboard
-		copyToClipboard("D:\\D\\NIckelfox_2024\\Nickelfox\\Resume\\Color block resume.docx");
+		//copyToClipboard("D:\\D\\NIckelfox_2024\\Nickelfox\\Resume\\Color block resume.docx");
 
 		// Give a little delay to ensure the clipboard is ready (you can adjust this if necessary)
 		Thread.sleep(1000);
@@ -195,9 +195,9 @@ public class Career_Page {
 
 	// Helper method to copy text to the system clipboard
 	private static void copyToClipboard(String text) {
-		StringSelection stringSelection = new StringSelection(text);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
-		System.out.println("resume upload successfully");
+	//	StringSelection stringSelection = new StringSelection(text);
+		//Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+	//	System.out.println("resume upload successfully");
 
 	}
 
@@ -252,11 +252,7 @@ public class Career_Page {
 	}
 
 	// Helper method to copy text to the system clipboard
-	private static void copyToClipboard2(String text) throws InterruptedException {
-		StringSelection stringSelection = new StringSelection(text);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
-		Thread.sleep(15000);
-	}
+	
 	//	utilities.fileUpload.uploadFile("C:\\Users\\Prashant kumar\\Videos\\nickelFox (1)\\nickelFox\\testData\\Color block resume.docx");
 
 }
