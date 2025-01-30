@@ -167,8 +167,8 @@ public class Career_Page {
 		Thread.sleep(8000);
 		//textStateSelectOpts.click();
 		//Thread.sleep(8000);
-		textLinkedinLink.sendKeys("https://x.com/nayantharau/status/1844129837818290371?s=48");
-		System.out.println("enter the linkdin link");
+	//	textLinkedinLink.sendKeys("https://x.com/nayantharau/status/1844129837818290371?s=48");
+	//	System.out.println("enter the linkdin link");
 		Thread.sleep(5000);
 	//	textResume.click();
 	//	System.out.println("click on the resume upload");
