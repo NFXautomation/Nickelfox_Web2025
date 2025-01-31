@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -25,25 +27,25 @@ public class LoginTest {
     public void setUp() {
     	WebDriverManager.chromedriver().setup();
 
-		ChromeOptions options = new ChromeOptions();
+		FirefoxOptions options = new FirefoxOptions();
 		options.addArguments("start-maximized"); // open Browser in maximized mode
-		options.addArguments("--disable-infobars"); // disabling infobars
-		options.addArguments("--disable-extensions"); // disabling extensions
-		options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-		options.addArguments("--no-sandbox");// Bypass OS security model
-		options.addArguments("--disable-gpu"); // applicable to windows os only
-		options.addArguments("--headless");
+	//	options.addArguments("--disable-infobars"); // disabling infobars
+	//	options.addArguments("--disable-extensions"); // disabling extensions
+	//	options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+	//	options.addArguments("--no-sandbox");// Bypass OS security model
+	//	options.addArguments("--disable-gpu"); // applicable to windows os only
+		//options.addArguments("--headless");
 		options.addArguments("--window-position=1920,1080");
 		options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36");
 	
-		driver = new ChromeDriver(options=options);
+		driver = new FirefoxDriver(options=options);
 		driver.manage().window().maximize();
 		  driver.get("https://www.netflix.com/login");
 		//driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		String strTitle=driver.getTitle();
 		System.out.println("Title =" + " " + strTitle);
 		System.out.println("user navigate to the website");
-        driver.get("https://www.netflix.com/login");
+  
         
       
     }
@@ -51,18 +53,18 @@ public class LoginTest {
     @Test
     public void testLogin() throws InterruptedException {
     	 WebElement emailField = driver.findElement(By.name("userLoginId"));
-            emailField.sendKeys("vkpatel14355@gmail.com");
+         emailField.sendKeys("vkpatel14355@gmail.com");
 
-            // Locate the password input field and enter the password
-            WebElement passwordField = driver.findElement(By.name("password"));
-            passwordField.sendKeys("Dream@14355");
+         // Locate the password input field and enter the password
+         WebElement passwordField = driver.findElement(By.name("password"));
+         passwordField.sendKeys("Dream@14355");
 
-            // Locate the Sign In button and click it
-            WebElement signInButton = driver.findElement(By.xpath("//button[@type='submit']"));
-            signInButton.click();
+         // Locate the Sign In button and click it
+         WebElement signInButton = driver.findElement(By.xpath("//button[@type='submit']"));
+         signInButton.click();
 
-            // Wait for a few seconds (you can use WebDriverWait for better synchronization)
-            Thread.sleep(5000);
+         // Wait for a few seconds (you can use WebDriverWait for better synchronization)
+         Thread.sleep(5000);
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
@@ -70,12 +72,6 @@ public class LoginTest {
         }
         
         
-    }
     
-    @AfterClass
-    public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
     }
 }
