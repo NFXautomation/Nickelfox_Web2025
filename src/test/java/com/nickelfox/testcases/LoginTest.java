@@ -25,24 +25,23 @@ public class LoginTest {
     
     @BeforeClass
     public void setUp() {
-    	
+    	WebDriverManager.firefoxdriver().setup();
 
 		FirefoxOptions options = new FirefoxOptions();
 		options.addArguments("start-maximized"); // open Browser in maximized mode
-		options.addArguments("--disable-infobars"); // disabling infobars
-		options.addArguments("--disable-extensions"); // disabling extensions
-		options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-		options.addArguments("--no-sandbox");// Bypass OS security model
+	//	options.addArguments("--disable-infobars"); // disabling infobars
+	//	options.addArguments("--disable-extensions"); // disabling extensions
+	//	options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+	//	options.addArguments("--no-sandbox");// Bypass OS security model
 		options.addArguments("--disable-gpu"); // applicable to windows os only
-		options.addArguments("--headless");
+		//options.addArguments("--headless");
 		options.addArguments("--window-position=1920,1080");
-	options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:115.0) Gecko/20100101 Firefox/115.0");
-
+		options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36");
 	
 		driver = new FirefoxDriver(options=options);
-		
+		driver.manage().window().maximize();
 		  driver.get("https://www.netflix.com/login");
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		String strTitle=driver.getTitle();
 		System.out.println("Title =" + " " + strTitle);
 		System.out.println("user navigate to the website");
