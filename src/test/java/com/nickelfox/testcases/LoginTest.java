@@ -50,19 +50,19 @@ public class LoginTest {
     
     @Test
     public void testLogin() throws InterruptedException {
-    	Thread.sleep(5000);
-    	WebElement emailField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("userLoginId")));
-        emailField.sendKeys("vkpatel14355@gmail.com");
-        Thread.sleep(5000);
-        WebElement passwordField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
-        passwordField.sendKeys("Dream@14355");
-        Thread.sleep(5000);
-        WebElement loginButton = driver.findElement(By.xpath("//button[@data-uia='login-submit-button']"));
-        loginButton.click();
-        
-        System.out.println("Login button clicked successfully!");
-        
-        // Validate login (Example: Check for error message or dashboard)
+    	 WebElement emailField = driver.findElement(By.name("userLoginId"));
+            emailField.sendKeys("vkpatel14355@gmail.com");
+
+            // Locate the password input field and enter the password
+            WebElement passwordField = driver.findElement(By.name("password"));
+            passwordField.sendKeys("Dream@14355");
+
+            // Locate the Sign In button and click it
+            WebElement signInButton = driver.findElement(By.xpath("//button[@type='submit']"));
+            signInButton.click();
+
+            // Wait for a few seconds (you can use WebDriverWait for better synchronization)
+            Thread.sleep(5000);
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
