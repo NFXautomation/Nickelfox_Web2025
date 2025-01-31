@@ -29,12 +29,12 @@ public class LoginTest {
 
 		FirefoxOptions options = new FirefoxOptions();
 		options.addArguments("start-maximized"); // open Browser in maximized mode
-		options.addArguments("--disable-infobars"); // disabling infobars
-		options.addArguments("--disable-extensions"); // disabling extensions
+		//options.addArguments("--disable-infobars"); // disabling infobars
+		//options.addArguments("--disable-extensions"); // disabling extensions
 		options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 		options.addArguments("--no-sandbox");// Bypass OS security model
 		options.addArguments("--disable-gpu"); // applicable to windows os only
-		//options.addArguments("--headless");
+		options.addArguments("--headless");
 		options.addArguments("--window-position=1920,1080");
 		options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) FireFox/134.0.2 Chrome/87.0.4280.88 Safari/537.36");
 
