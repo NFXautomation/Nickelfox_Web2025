@@ -36,8 +36,7 @@ public class LoginTest {
 		options.addArguments("--disable-gpu"); // applicable to windows os only
 		//options.addArguments("--headless");
 		options.addArguments("--window-position=1920,1080");
-		options.addArguments("general.useragent.override", 
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 Firefox/134.0.2");
+		options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) FireFox/134.0.2 Chrome/87.0.4280.88 Safari/537.36");
 
 	
 		driver = new FirefoxDriver(options=options);
