@@ -12,6 +12,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 import java.time.Duration;
 
 public class LoginTest {
@@ -21,11 +23,26 @@ public class LoginTest {
     
     @BeforeClass
     public void setUp() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--incognito");
-        
-        driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
+    	WebDriverManager.chromedriver().setup();
+
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("start-maximized"); // open Browser in maximized mode
+		options.addArguments("--disable-infobars"); // disabling infobars
+		options.addArguments("--disable-extensions"); // disabling extensions
+		options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+		options.addArguments("--no-sandbox");// Bypass OS security model
+		options.addArguments("--disable-gpu"); // applicable to windows os only
+		options.addArguments("--headless");
+		options.addArguments("--window-position=1920,1080");
+		options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36");
+	
+		driver = new ChromeDriver(options=options);
+		driver.manage().window().maximize();
+		  driver.get("https://www.netflix.com/login");
+		//driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		String strTitle=driver.getTitle();
+		System.out.println("Title =" + " " + strTitle);
+		System.out.println("user navigate to the website");
         driver.get("https://www.netflix.com/login");
         
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
