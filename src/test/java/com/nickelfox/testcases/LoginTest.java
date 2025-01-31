@@ -39,7 +39,7 @@ public class LoginTest {
 		options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 Firefox/41.0");
 	
 		driver = new FirefoxDriver(options=options);
-		driver.manage().window().maximize();
+		
 		  driver.get("https://www.netflix.com/login");
 		//driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		String strTitle=driver.getTitle();
